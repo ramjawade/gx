@@ -16,7 +16,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@gx/core": ["libs/core/src/index.ts"]
+      "@gx/core": ["libs/core/src/index.ts"],
+      "@gx/ui-tools": ["libs/ui-tools/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

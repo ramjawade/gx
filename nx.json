@@ -32,6 +32,9 @@
     },
     "core": {
       "tags": ["core"]
+    },
+    "ui-tools": {
+      "tags": []
     }
   }
 }

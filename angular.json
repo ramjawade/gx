@@ -151,6 +151,44 @@
           "style": "scss"
         }
       }
+    },
+    "ui-tools": {
+      "projectType": "library",
+      "root": "libs/ui-tools",
+      "sourceRoot": "libs/ui-tools/src",
+      "prefix": "gx",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/ui-tools/tsconfig.lib.json",
+            "project": "libs/ui-tools/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/ui-tools/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/ui-tools/src/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ui-tools/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {
