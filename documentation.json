@@ -1,0 +1,156 @@
+{
+    "pipes": [],
+    "interfaces": [],
+    "injectables": [],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "InputComponent",
+            "id": "component-InputComponent-15ab9ab07435d741064e9459cfff5d2e",
+            "file": "libs/ui-tools/src/lib/input/components/input/input.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "gx-input",
+            "styleUrls": [
+                "./input.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./input.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "appearance",
+                    "defaultValue": "\"outline\"",
+                    "description": "<p>abc</p>\n",
+                    "line": 19,
+                    "type": "MatFormFieldAppearance"
+                },
+                {
+                    "name": "value",
+                    "defaultValue": "\"\"",
+                    "description": "<p>Value of input</p>\n",
+                    "line": 14,
+                    "type": "number | string"
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\nimport type { MatFormFieldAppearance } from '@angular/material/form-field';\n\n@Component({\n  selector: 'gx-input',\n  templateUrl: './input.component.html',\n  styleUrls: ['./input.component.scss']\n})\nexport class InputComponent implements OnInit {\n  /**\n   * Value of input\n   */\n  @Input() value: number | string = \"\";\n\n  /**\n   * abc\n   */\n  @Input() appearance: MatFormFieldAppearance = \"outline\";\n\n\n  constructor() { }\n\n  /**\n   * @ignore\n   */\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./input.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [],
+                "line": 19
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<mat-form-field class=\"example-form-field\" [appearance]=\"appearance\">\n  <mat-label>Clearable input</mat-label>\n  <input matInput type=\"text\" [(ngModel)]=\"value\" />\n  <button\n    mat-button\n    *ngIf=\"value\"\n    matSuffix\n    mat-icon-button\n    aria-label=\"Clear\"\n    (click)=\"value = ''\"\n  >\n    <mat-icon>close</mat-icon>\n  </button>\n</mat-form-field>\n"
+        }
+    ],
+    "modules": [
+        {
+            "name": "InputModule",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "InputComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "InputComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "UiToolsModule",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        }
+    ],
+    "miscellaneous": [],
+    "routes": [],
+    "coverage": {
+        "count": 50,
+        "status": "medium",
+        "files": [
+            {
+                "filePath": "libs/ui-tools/src/lib/input/components/input/input.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "InputComponent",
+                "coveragePercent": 50,
+                "coverageCount": "2/4",
+                "status": "medium"
+            }
+        ]
+    }
+}

@@ -21,8 +21,14 @@
             "polyfills": "apps/demo/src/polyfills.ts",
             "tsConfig": "apps/demo/tsconfig.app.json",
             "aot": true,
-            "assets": ["apps/demo/src/favicon.ico", "apps/demo/src/assets"],
-            "styles": ["apps/demo/src/styles.scss"],
+            "assets": [
+              "apps/demo/src/favicon.ico",
+              "apps/demo/src/assets"
+            ],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
+              "apps/demo/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -76,7 +82,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/demo/src/**/*.ts"]
+            "lintFilePatterns": [
+              "apps/demo/src/**/*.ts"
+            ]
           }
         },
         "test": {
@@ -109,7 +117,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/demo-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/demo-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }
@@ -135,7 +145,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/core/src/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/core/src/**/*.ts"
+            ]
           }
         },
         "test": {
@@ -173,7 +185,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/ui-tools/src/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/ui-tools/src/**/*.ts"
+            ]
           }
         },
         "test": {
@@ -182,11 +196,69 @@
             "jestConfig": "libs/ui-tools/jest.config.js",
             "passWithNoTests": true
           }
+        },
+        "storybook": {
+          "builder": "@nrwl/storybook:storybook",
+          "options": {
+            "uiFramework": "@storybook/angular",
+            "port": 4400,
+            "config": {
+              "configFolder": "libs/ui-tools/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
+        },
+        "build-storybook": {
+          "builder": "@nrwl/storybook:build",
+          "options": {
+            "uiFramework": "@storybook/angular",
+            "outputPath": "dist/storybook/ui-tools",
+            "config": {
+              "configFolder": "libs/ui-tools/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
         }
       },
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
+        }
+      }
+    },
+    "ui-tools-e2e": {
+      "root": "apps/ui-tools-e2e",
+      "sourceRoot": "apps/ui-tools-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/ui-tools-e2e/cypress.json",
+            "tsConfig": "apps/ui-tools-e2e/tsconfig.e2e.json",
+            "devServerTarget": "ui-tools:storybook"
+          },
+          "configurations": {
+            "ci": {
+              "devServerTarget": "ui-tools:storybook:ci"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/ui-tools-e2e/**/*.{js,ts}"
+            ]
+          }
         }
       }
     }
