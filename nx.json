@@ -29,6 +29,9 @@
     "demo-e2e": {
       "tags": [],
       "implicitDependencies": ["demo"]
+    },
+    "core": {
+      "tags": ["core"]
     }
   }
 }
