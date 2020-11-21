@@ -1,0 +1,63 @@
+<button
+  mat-raised-button
+  [disabled]="disabled"
+  [title]="title"
+  [color]="theme"
+  *ngIf="type === 'raised'"
+>
+  {{ value }}
+</button>
+<button
+  mat-button
+  [disabled]="disabled"
+  [title]="title"
+  [color]="theme"
+  *ngIf="type === 'basic'"
+>
+  {{ value }}
+</button>
+<button
+  mat-stroked-button
+  [disabled]="disabled"
+  [title]="title"
+  [color]="theme"
+  *ngIf="type === 'stroked'"
+>
+  {{ value }}
+</button>
+<button
+  mat-flat-button
+  [disabled]="disabled"
+  [title]="title"
+  [color]="theme"
+  *ngIf="type === 'flat'"
+>
+  {{ value }}
+</button>
+<button
+  mat-icon-button
+  [disabled]="disabled"
+  [title]="title"
+  [color]="theme"
+  *ngIf="type === 'icon'"
+>
+  {{ value }}
+</button>
+<button
+  mat-fab
+  [disabled]="disabled"
+  [title]="title"
+  [color]="theme"
+  *ngIf="type === 'fab'"
+>
+  {{ value }}
+</button>
+<button
+  mat-mini-fab
+  [disabled]="disabled"
+  [title]="title"
+  [color]="theme"
+  *ngIf="type === 'mini-fab'"
+>
+  {{ value }}
+</button>

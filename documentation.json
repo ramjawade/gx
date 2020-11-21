@@ -6,8 +6,89 @@
     "directives": [],
     "components": [
         {
+            "name": "ButtonComponent",
+            "id": "component-ButtonComponent-8eb6c056b6139bf2e31c159516ecb3bd",
+            "file": "libs/ui-tools/src/lib/button/components/button/button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "host": {},
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "gx-button",
+            "styleUrls": [
+                "./button.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./button.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "disabled",
+                    "defaultValue": "false",
+                    "description": "<p>Disable Button</p>\n",
+                    "line": 26
+                },
+                {
+                    "name": "theme",
+                    "defaultValue": "\"primary\"",
+                    "description": "<p>Button Theme</p>\n",
+                    "line": 21,
+                    "type": "ThemePalette"
+                },
+                {
+                    "name": "title",
+                    "defaultValue": "\"\"",
+                    "description": "<p>Button Title </p>\n",
+                    "line": 31
+                },
+                {
+                    "name": "type",
+                    "defaultValue": "'raised'",
+                    "description": "<p>Button Type</p>\n",
+                    "line": 36,
+                    "type": "ButtonType"
+                },
+                {
+                    "name": "value",
+                    "defaultValue": "\"\"",
+                    "description": "<p>Button Value</p>\n",
+                    "line": 41
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\nimport type { ThemePalette } from '@angular/material/core';\n\ntype ButtonType = 'raised' | 'stroked' | 'flat' | 'fab' | 'mini-fab' | 'icon' | 'basic';\n\n@Component({\n  selector: 'gx-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss'],\n  host: {\n    '[attr.mat-raised-button]': 'flag'\n  }\n\n})\nexport class ButtonComponent implements OnInit {\n\n  /**\n   * Button Theme\n   */\n  @Input() theme: ThemePalette = \"primary\";\n\n  /**\n   * Disable Button\n   */\n  @Input() disabled = false;\n\n  /**\n   * Button Title \n   */\n  @Input() title = \"\";\n\n  /**\n   * Button Type\n   */\n  @Input() type: ButtonType = 'raised'\n\n  /**\n   * Button Value\n   */\n  @Input() value = \"\"\n\n  constructor() { }\n\n  /**\n   * @ignore\n   */\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./button.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [],
+                "line": 41
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<button\n  mat-raised-button\n  [disabled]=\"disabled\"\n  [title]=\"title\"\n  [color]=\"theme\"\n  *ngIf=\"type === 'raised'\"\n>\n  {{ value }}\n</button>\n<button\n  mat-button\n  [disabled]=\"disabled\"\n  [title]=\"title\"\n  [color]=\"theme\"\n  *ngIf=\"type === 'basic'\"\n>\n  {{ value }}\n</button>\n<button\n  mat-stroked-button\n  [disabled]=\"disabled\"\n  [title]=\"title\"\n  [color]=\"theme\"\n  *ngIf=\"type === 'stroked'\"\n>\n  {{ value }}\n</button>\n<button\n  mat-flat-button\n  [disabled]=\"disabled\"\n  [title]=\"title\"\n  [color]=\"theme\"\n  *ngIf=\"type === 'flat'\"\n>\n  {{ value }}\n</button>\n<button\n  mat-icon-button\n  [disabled]=\"disabled\"\n  [title]=\"title\"\n  [color]=\"theme\"\n  *ngIf=\"type === 'icon'\"\n>\n  {{ value }}\n</button>\n<button\n  mat-fab\n  [disabled]=\"disabled\"\n  [title]=\"title\"\n  [color]=\"theme\"\n  *ngIf=\"type === 'fab'\"\n>\n  {{ value }}\n</button>\n<button\n  mat-mini-fab\n  [disabled]=\"disabled\"\n  [title]=\"title\"\n  [color]=\"theme\"\n  *ngIf=\"type === 'mini-fab'\"\n>\n  {{ value }}\n</button>\n"
+        },
+        {
             "name": "InputComponent",
-            "id": "component-InputComponent-15ab9ab07435d741064e9459cfff5d2e",
+            "id": "component-InputComponent-702502f051b76e91093c8cd891a9d14a",
             "file": "libs/ui-tools/src/lib/input/components/input/input.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -27,7 +108,7 @@
                 {
                     "name": "appearance",
                     "defaultValue": "\"outline\"",
-                    "description": "<p>abc</p>\n",
+                    "description": "<p>Mat appearance of input</p>\n",
                     "line": 19,
                     "type": "MatFormFieldAppearance"
                 },
@@ -47,7 +128,7 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\nimport type { MatFormFieldAppearance } from '@angular/material/form-field';\n\n@Component({\n  selector: 'gx-input',\n  templateUrl: './input.component.html',\n  styleUrls: ['./input.component.scss']\n})\nexport class InputComponent implements OnInit {\n  /**\n   * Value of input\n   */\n  @Input() value: number | string = \"\";\n\n  /**\n   * abc\n   */\n  @Input() appearance: MatFormFieldAppearance = \"outline\";\n\n\n  constructor() { }\n\n  /**\n   * @ignore\n   */\n  ngOnInit(): void {\n  }\n\n}\n",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\nimport type { MatFormFieldAppearance } from '@angular/material/form-field';\n\n@Component({\n  selector: 'gx-input',\n  templateUrl: './input.component.html',\n  styleUrls: ['./input.component.scss']\n})\nexport class InputComponent implements OnInit {\n  /**\n   * Value of input\n   */\n  @Input() value: number | string = \"\";\n\n  /**\n   * Mat appearance of input\n   */\n  @Input() appearance: MatFormFieldAppearance = \"outline\";\n\n\n  constructor() { }\n\n  /**\n   * @ignore\n   */\n  ngOnInit(): void {\n  }\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -69,6 +150,43 @@
         }
     ],
     "modules": [
+        {
+            "name": "ButtonModule",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "ButtonComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "ButtonComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
         {
             "name": "InputModule",
             "children": [
@@ -136,12 +254,52 @@
             ]
         }
     ],
-    "miscellaneous": [],
+    "miscellaneous": {
+        "variables": [],
+        "functions": [],
+        "typealiases": [
+            {
+                "name": "ButtonType",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "\"raised\" | \"stroked\" | \"flat\" | \"fab\" | \"mini-fab\" | \"icon\" | \"basic\"",
+                "file": "libs/ui-tools/src/lib/button/components/button/button.component.ts",
+                "description": "",
+                "kind": 168
+            }
+        ],
+        "enumerations": [],
+        "groupedVariables": {},
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {
+            "libs/ui-tools/src/lib/button/components/button/button.component.ts": [
+                {
+                    "name": "ButtonType",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "\"raised\" | \"stroked\" | \"flat\" | \"fab\" | \"mini-fab\" | \"icon\" | \"basic\"",
+                    "file": "libs/ui-tools/src/lib/button/components/button/button.component.ts",
+                    "description": "",
+                    "kind": 168
+                }
+            ]
+        }
+    },
     "routes": [],
     "coverage": {
-        "count": 50,
-        "status": "medium",
+        "count": 60,
+        "status": "good",
         "files": [
+            {
+                "filePath": "libs/ui-tools/src/lib/button/components/button/button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonComponent",
+                "coveragePercent": 71,
+                "coverageCount": "5/7",
+                "status": "good"
+            },
             {
                 "filePath": "libs/ui-tools/src/lib/input/components/input/input.component.ts",
                 "type": "component",

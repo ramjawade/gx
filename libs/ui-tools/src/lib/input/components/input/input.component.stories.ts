@@ -1,4 +1,4 @@
-import { text, number, boolean } from '@storybook/addon-knobs';
+import { text } from '@storybook/addon-knobs';
 import { InputModule } from '../../input.module';
 import { InputComponent } from './input.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
