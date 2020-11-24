@@ -34,23 +34,20 @@
     },
     "demo-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "demo"
-      ]
+      "implicitDependencies": ["demo"]
     },
     "core": {
-      "tags": [
-        "core"
-      ]
+      "tags": ["core"]
     },
     "ui-tools": {
       "tags": []
     },
     "ui-tools-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "ui-tools"
-      ]
+      "implicitDependencies": ["ui-tools"]
+    },
+    "theme": {
+      "tags": []
     }
   }
 }

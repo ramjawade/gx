@@ -1,0 +1,5 @@
+:host {
+  & :only-child {
+    height: 100%;
+  }
+}

@@ -3,10 +3,10 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { InputModule } from "@gx/ui-tools";
+import { ButtonModule, DrawerModule, IconModule, InputModule, ToolbarModule } from "@gx/ui-tools";
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, BrowserAnimationsModule, InputModule],
+  imports: [BrowserModule, BrowserAnimationsModule, InputModule, DrawerModule, ToolbarModule, ButtonModule, IconModule],
   providers: [],
   bootstrap: [AppComponent],
 })

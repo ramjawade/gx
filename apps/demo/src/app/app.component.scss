@@ -3,3 +3,19 @@
   left: 50%;
   transform: translateX(-50%);
 }
+
+.page-sidenav {
+  background: lightblue;
+  height: 100%;
+}
+
+.page-content {
+  background: #dfdfdf;
+  height: 100%;
+}
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

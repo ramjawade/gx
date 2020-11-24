@@ -1,5 +1,20 @@
-<div class="page">
-  <div class="page-header">
-    <h1>Welcome to Gx World</h1>
+<gx-drawer #drawer class="page">
+  <div class="page-sidenav" sidenav>
+    <div class="center">Sidenav</div>
   </div>
-</div>
+  <div class="page-content" content>
+    <gx-toolbar>
+      <gx-button
+        [type]="'icon'"
+        [iconTemplate]="menuIcon"
+        (click)="drawer.toggle()"
+      >
+        <ng-template #menuIcon>
+          <gx-icon [fontIcon]="'icon-list1'"></gx-icon
+        ></ng-template>
+      </gx-button>
+      <span>Welcome to Gx World</span>
+    </gx-toolbar>
+    <div class="center">content</div>
+  </div>
+</gx-drawer>

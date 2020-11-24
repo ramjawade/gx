@@ -70,7 +70,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "",
+                    "data": ":host {\n  ::ng-deep {\n    .mat-raised-button {\n      min-width: 4rem;\n      padding: 0 1rem;\n      border-radius: 0.25rem;\n      line-height: 2.25rem;\n    }\n  }\n}\n",
                     "styleUrl": "./button.component.scss"
                 }
             ],

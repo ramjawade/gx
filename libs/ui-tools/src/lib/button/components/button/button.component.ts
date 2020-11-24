@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit, TemplateRef } from '@angular/core';
 import type { ThemePalette } from '@angular/material/core';
+import { IconComponent } from '../../../icon';
 
 type ButtonType = 'raised' | 'stroked' | 'flat' | 'fab' | 'mini-fab' | 'icon' | 'basic';
 
@@ -10,7 +11,8 @@ type ButtonType = 'raised' | 'stroked' | 'flat' | 'fab' | 'mini-fab' | 'icon' | 
   styleUrls: ['./button.component.scss'],
   host: {
     '[attr.mat-raised-button]': 'flag'
-  }
+  },
+  changeDetection: ChangeDetectionStrategy.OnPush
 
 })
 export class ButtonComponent implements OnInit {
@@ -39,6 +41,8 @@ export class ButtonComponent implements OnInit {
    * Button Value
    */
   @Input() value = ""
+
+  @Input() iconTemplate: TemplateRef<IconComponent>;
 
   constructor() { }
 
