@@ -22,11 +22,7 @@
             "tsConfig": "apps/demo/tsconfig.app.json",
             "aot": true,
             "assets": ["apps/demo/src/favicon.ico", "apps/demo/src/assets"],
-            "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "apps/demo/src/styles.scss",
-              "libs/theme/src/lib/icomoon/style.css"
-            ],
+            "styles": ["apps/demo/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -220,7 +216,9 @@
       },
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "changeDetection": "OnPush",
+          "export": true
         }
       }
     },

@@ -1,0 +1,33 @@
+/**
+0   -600    -phone
+600 -900    -tab-pro
+900 -1200   -tab-land
+1200-1800   - Normal css will apply
+1800 + big screens 
+
+*/
+
+@mixin respond($breakpoints) {
+  @if $breakpoints ==phone {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+  @if $breakpoints == tab-pro {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
+
+  @if $breakpoints == tab-land {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+
+  @if $breakpoints == big-s {
+    @media (min-width: 1800px) {
+      @content;
+    }
+  }
+}
