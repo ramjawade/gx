@@ -1,6 +1,17 @@
 <gx-drawer #drawer class="page">
   <div class="page-sidenav" sidenav>
-    <div class="center">Sidenav</div>
+    <div class="">
+      <div class="page-logo">
+        <h2 class="center">
+          <gx-icon [fontIcon]="'icon-earth'"> </gx-icon>
+        </h2>
+      </div>
+      <mat-selection-list #shoes [multiple]="false">
+        <mat-list-option *ngFor="let shoe of typesOfShoes" [value]="shoe">
+          {{ shoe }}
+        </mat-list-option>
+      </mat-selection-list>
+    </div>
   </div>
   <div class="page-content" content>
     <gx-toolbar>

@@ -1,18 +1,23 @@
-.page-header {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+.page {
+  &-header {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &-sidenav {
+    background: lightblue;
+    height: 100%;
+  }
+  &-content {
+    background: #dfdfdf;
+    height: 100%;
+  }
+  &-logo {
+    position: relative;
+    height: 64px;
+  }
 }
 
-.page-sidenav {
-  background: lightblue;
-  height: 100%;
-}
-
-.page-content {
-  background: #dfdfdf;
-  height: 100%;
-}
 .center {
   position: absolute;
   left: 50%;

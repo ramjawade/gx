@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'demo';
+  typesOfShoes: string[] = ['Peacock', 'Dove', 'Sparrow', 'Goose', 'Ostrich', 'Pigeon', 'Turkey', 'Hawk', 'Bald eagle', 'Raven', 'Parrot'];
 }
