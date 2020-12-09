@@ -2,3 +2,12 @@
 .mat-list-base {
   padding-top: 0 !important;
 }
+
+// For mobile
+// mobile view css should be in application
+.mat-drawer {
+  width: 20%;
+  @include respond(phone) {
+    width: 100%;
+  }
+}

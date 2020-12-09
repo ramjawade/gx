@@ -1,8 +1,12 @@
 <mat-drawer-container [hasBackdrop]="hasBackdrop">
-  <mat-drawer [style.width]="'15%'" #drawer opened="true" [mode]="mode">
-    <ng-content select="[sidenav]"></ng-content>
+  <mat-drawer #drawer opened="true" [mode]="mode">
+    <section class="sidenav">
+      <ng-content select="[sidenav]"></ng-content>
+    </section>
   </mat-drawer>
   <mat-drawer-content>
-    <ng-content select="[content]"></ng-content>
+    <section class="content">
+      <ng-content select="[content]"></ng-content>
+    </section>
   </mat-drawer-content>
 </mat-drawer-container>

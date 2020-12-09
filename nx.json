@@ -48,6 +48,9 @@
     },
     "theme": {
       "tags": []
+    },
+    "modules-user-mgt": {
+      "tags": ["module"]
     }
   }
 }

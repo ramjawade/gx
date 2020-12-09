@@ -1,4 +1,4 @@
-# Gx
+# Gx Workspace (Generic Workspace)
 
 ## Quick Start & Documentation
 
@@ -39,6 +39,8 @@ When using Nx, you can create multiple applications and libraries in the same wo
 
 Run `ng g @nrwl/angular:lib my-lib` to generate a library.
 ng g lib theme --dry-run --publishable --importPath=@gx/theme
+
+nx g lib user-mgt --dry-run --importPath=@gx/user-mgt --directory=modules --tags=module --prefix=um
 
 > You can also use any of the plugins above to generate libraries as well.
 

@@ -285,6 +285,44 @@
           "style": "scss"
         }
       }
+    },
+    "modules-user-mgt": {
+      "projectType": "library",
+      "root": "libs/modules/user-mgt",
+      "sourceRoot": "libs/modules/user-mgt/src",
+      "prefix": "um",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/modules/user-mgt/tsconfig.lib.json",
+            "project": "libs/modules/user-mgt/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/modules/user-mgt/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/modules/user-mgt/src/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/modules/user-mgt/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {
@@ -296,7 +334,11 @@
         "linter": "eslint"
       },
       "library": {
-        "linter": "eslint"
+        "linter": "eslint",
+        "simple-module-name": true,
+        "lazy": true,
+        "routing": true,
+        "publishable": true
       },
       "storybook-configuration": {
         "linter": "eslint"
