@@ -5,5 +5,7 @@ module.exports = {
     '<rootDir>/libs/ui-tools',
     '<rootDir>/libs/theme',
     '<rootDir>/libs/modules/user-mgt',
+    '<rootDir>/libs/modules/product-mgt',
+    '<rootDir>/apps/product',
   ],
 };

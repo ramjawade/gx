@@ -19,7 +19,8 @@
       "@gx/core": ["libs/core/src/index.ts"],
       "@gx/ui-tools": ["libs/ui-tools/src/index.ts"],
       "@gx/theme": ["libs/theme/src/index.ts"],
-      "@gx/user-mgt": ["libs/modules/user-mgt/src/index.ts"]
+      "@gx/user-mgt": ["libs/modules/user-mgt/src/index.ts"],
+      "@gx/pdt-mgt": ["libs/modules/product-mgt/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

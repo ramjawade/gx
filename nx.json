@@ -51,6 +51,16 @@
     },
     "modules-user-mgt": {
       "tags": ["module"]
+    },
+    "modules-product-mgt": {
+      "tags": ["module"]
+    },
+    "product": {
+      "tags": []
+    },
+    "product-e2e": {
+      "tags": [],
+      "implicitDependencies": ["product"]
     }
   }
 }
