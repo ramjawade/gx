@@ -78,3 +78,10 @@ Run `nx dep-graph` to see a diagram of the dependencies of your projects.
 ## Further help
 
 Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
+
+//TODO storybook for all component
+//TODO Versioning
+//TODO Single SAP
+//TODO Component
+//TODO Shell App
+//TODO Platform Service
