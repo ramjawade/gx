@@ -61,6 +61,9 @@
     "product-e2e": {
       "tags": [],
       "implicitDependencies": ["product"]
+    },
+    "template-template1": {
+      "tags": []
     }
   }
 }

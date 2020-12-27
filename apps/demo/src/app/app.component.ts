@@ -7,14 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'demo';
-  typesOfShoes = [
-    {
-      "name": "Create user",
-      "route": "user-mgt/create"
-    }, {
-      name: "List User",
-      route: "user-mgt/list"
-    }
 
-  ]
 }

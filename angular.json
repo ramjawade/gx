@@ -477,6 +477,44 @@
           }
         }
       }
+    },
+    "template-template1": {
+      "projectType": "library",
+      "root": "libs/template/template1",
+      "sourceRoot": "libs/template/template1/src",
+      "prefix": "gx",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/template/template1/tsconfig.lib.json",
+            "project": "libs/template/template1/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/template/template1/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/template/template1/src/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/template/template1/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {
@@ -490,8 +528,6 @@
       "library": {
         "linter": "eslint",
         "simple-module-name": true,
-        "lazy": true,
-        "routing": true,
         "publishable": true
       },
       "storybook-configuration": {

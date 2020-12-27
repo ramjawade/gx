@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@import './../../../libs/theme/src/lib/styles.scss';
+.mat-list-base {
+  padding-top: 0 !important;
+}
+
+// For mobile
+// mobile view css should be in application
+.mat-drawer {
+  width: 20%;
+  @include respond(phone) {
+    width: 100%;
+  }
+}
