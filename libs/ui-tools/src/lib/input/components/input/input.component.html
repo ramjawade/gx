@@ -1,7 +1,19 @@
 <mat-form-field class="example-form-field" [appearance]="appearance">
   <mat-label>Clearable input</mat-label>
-  <input matInput type="text" [(ngModel)]="value" />
-  <button
+  <input
+    matInput
+    [formControl]="formControl"
+    type="text"
+    [(ngModel)]="value"
+    [matAutocomplete]="autocompleteRef"
+  />
+  <ng-container matSuffix>
+    <ng-content select="[suffix]"></ng-content>
+  </ng-container>
+  <ng-container matPrefix>
+    <ng-content select="[prefix]"></ng-content>
+  </ng-container>
+  <!-- <button
     mat-button
     *ngIf="value"
     matSuffix
@@ -10,5 +22,5 @@
     (click)="value = ''"
   >
     <mat-icon>close</mat-icon>
-  </button>
+  </button> -->
 </mat-form-field>

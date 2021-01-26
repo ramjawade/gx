@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { MatAutocomplete } from '@angular/material/autocomplete';
 import type { MatFormFieldAppearance } from '@angular/material/form-field';
 
 @Component({
@@ -18,6 +20,10 @@ export class InputComponent implements OnInit {
    * Mat appearance of input
    */
   @Input() appearance: MatFormFieldAppearance = "outline";
+
+  @Input() autocompleteRef: MatAutocomplete;
+
+  @Input() formControl: FormControl;
 
 
   constructor() { }

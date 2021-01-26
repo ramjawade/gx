@@ -1,0 +1,14 @@
+<gx-input [autocompleteRef]="auto" [formControl]="myControl">
+  <gx-button prefix [type]="'icon'" [iconTemplate]="search"></gx-button>
+  <ng-template #search>
+    <gx-icon [fontIcon]="'icon-search'"></gx-icon>
+  </ng-template>
+</gx-input>
+<mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+  <mat-option
+    *ngFor="let option of filteredOptions | async"
+    [value]="option[displayKey]"
+  >
+    {{ option[displayKey] }}
+  </mat-option>
+</mat-autocomplete>

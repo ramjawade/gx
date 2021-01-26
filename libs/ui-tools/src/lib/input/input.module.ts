@@ -4,8 +4,9 @@ import { InputComponent } from "./components/input/input.component";
 import { MatInputModule } from "@angular/material/input";
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from "@angular/material/icon";
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from "@angular/material/button";
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 @NgModule({
   declarations: [InputComponent],
   imports: [
@@ -14,7 +15,9 @@ import { MatButtonModule } from "@angular/material/button";
     MatFormFieldModule,
     MatIconModule,
     FormsModule,
-    MatButtonModule
+    ReactiveFormsModule,
+    MatButtonModule,
+    MatAutocompleteModule
   ],
   exports: [
     InputComponent
