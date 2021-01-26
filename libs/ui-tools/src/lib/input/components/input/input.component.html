@@ -1,12 +1,6 @@
 <mat-form-field class="example-form-field" [appearance]="appearance">
-  <mat-label>Clearable input</mat-label>
-  <input
-    matInput
-    [formControl]="formControl"
-    type="text"
-    [(ngModel)]="value"
-    [matAutocomplete]="autocompleteRef"
-  />
+  <mat-label> input</mat-label>
+  <input matInput [formControl]="formControl" type="text" />
   <ng-container matSuffix>
     <ng-content select="[suffix]"></ng-content>
   </ng-container>

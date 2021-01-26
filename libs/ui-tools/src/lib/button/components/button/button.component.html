@@ -3,49 +3,50 @@
   [disabled]="disabled"
   [title]="title"
   [color]="theme"
-  [value]="value"
+  (click)="onClick($event)"
   *ngIf="type === 'raised'"
 >
-  <ng-content></ng-content>
+  {{ value }}
 </button>
 <button
   mat-button
   [disabled]="disabled"
   [title]="title"
   [color]="theme"
-  [value]="value"
+  (click)="onClick($event)"
   *ngIf="type === 'basic'"
 >
-  <ng-content></ng-content>
+  {{ value }}
 </button>
 <button
   mat-stroked-button
   [disabled]="disabled"
   [title]="title"
   [color]="theme"
-  [value]="value"
+  (click)="onClick($event)"
   *ngIf="type === 'stroked'"
 >
-  <ng-content></ng-content>
+  {{ value }}
 </button>
 <button
   mat-flat-button
   [disabled]="disabled"
   [title]="title"
   [color]="theme"
-  [value]="value"
+  (click)="onClick($event)"
   *ngIf="type === 'flat'"
 >
-  <ng-content></ng-content>
+  {{ value }}
 </button>
 <button
   mat-icon-button
   [disabled]="disabled"
   [title]="title"
   [color]="theme"
-  [value]="value"
+  (click)="onClick($event)"
   *ngIf="type === 'icon'"
 >
+  {{ value }}
   <ng-container [ngTemplateOutlet]="iconTemplate"></ng-container>
 </button>
 <button
@@ -53,18 +54,18 @@
   [disabled]="disabled"
   [title]="title"
   [color]="theme"
-  [value]="value"
+  (click)="onClick($event)"
   *ngIf="type === 'fab'"
 >
-  <ng-content></ng-content>
+  {{ value }}
 </button>
 <button
   mat-mini-fab
   [disabled]="disabled"
   [title]="title"
   [color]="theme"
-  [value]="value"
+  (click)="onClick($event)"
   *ngIf="type === 'mini-fab'"
 >
-  <ng-content></ng-content>
+  {{ value }}
 </button>

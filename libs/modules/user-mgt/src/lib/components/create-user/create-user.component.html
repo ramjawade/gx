@@ -1,1 +1,22 @@
-<gx-advance-search></gx-advance-search>
+<gx-select
+  [formControl]="control1"
+  [privilege]="false"
+  [lable]="'Without Privilege'"
+  [options]="options$ | async"
+  (addOption)="addOption($event)"
+  [displayKey]="'viewValue'"
+></gx-select>
+
+<gx-select
+  [formControl]="control2"
+  [privilege]="true"
+  [lable]="'With Privilege'"
+  [options]="options$ | async"
+  (addOption)="addOption($event)"
+  [displayKey]="'viewValue'"
+></gx-select>
+<br />
+
+{{ 'data1 : ' + control1.value }}
+
+{{ 'data2:' + control2.value }}

@@ -1,0 +1,38 @@
+<mat-form-field appearance="outline">
+  <mat-label>{{ lable }}</mat-label>
+  <mat-select (openedChange)="onOpen()" [formControl]="formControl">
+    <gx-input class="input" [formControl]="inputFormControl"></gx-input>
+    <mat-option
+      fxLayout="row"
+      [disabled]="!privilege"
+      class="input__subtext"
+      *ngIf="(list | async)?.length == 0"
+    >
+      <span fxFlex>
+        {{ inputFormControl?.value | titlecase }} is unknown Item
+      </span>
+      <gx-button
+        [disabled]="!privilege"
+        (onclick)="onAddOption($event)"
+        [value]="'Add & select'"
+      >
+        Add & select
+      </gx-button>
+    </mat-option>
+    <mat-option *ngFor="let food of list | async" [value]="food.value">
+      {{ food.viewValue }}
+    </mat-option>
+    <gx-button
+      fxLayoutAlign="end"
+      *ngIf="filteredList.length > noOfItemsCount"
+      (onclick)="onMoreClick()"
+      [value]="filteredList.length - noOfItemsCount + 'more'"
+    ></gx-button>
+  </mat-select>
+  <ng-container matSuffix>
+    <ng-content select="[suffix]"></ng-content>
+  </ng-container>
+  <ng-container matPrefix>
+    <ng-content select="[prefix]"></ng-content>
+  </ng-container>
+</mat-form-field>

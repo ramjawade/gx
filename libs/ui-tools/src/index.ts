@@ -6,4 +6,5 @@ export * from './lib/button';
 export * from './lib/toolbar';
 export * from './lib/icon';
 export * from './lib/drawer';
+export * from './lib/select';
 export * from './lib/advance-search'

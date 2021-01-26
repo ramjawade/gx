@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { CreateUserComponent } from './components/create-user/create-user.component';
 import { ListUserComponent } from './components/list-user/list-user.component';
-import { AdvanceSearchModule, InputModule } from "@gx/ui-tools";
+import { AdvanceSearchModule, InputModule, SelectModule } from "@gx/ui-tools";
 export const umRoutes: Routes = [{
   path: '',
   redirectTo: "list",
@@ -22,6 +22,7 @@ export const umRoutes: Routes = [{
     CommonModule,
     InputModule,
     AdvanceSearchModule,
+    SelectModule,
     RouterModule.forChild(umRoutes),
   ],
   declarations: [CreateUserComponent, ListUserComponent],

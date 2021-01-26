@@ -21,7 +21,7 @@ export class InputComponent implements OnInit {
    */
   @Input() appearance: MatFormFieldAppearance = "outline";
 
-  @Input() autocompleteRef: MatAutocomplete;
+  @Input() autocompleteRef: MatAutocomplete = null;
 
   @Input() formControl: FormControl;
 

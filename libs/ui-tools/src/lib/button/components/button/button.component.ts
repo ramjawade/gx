@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import { ChangeDetectionStrategy, Component, Input, OnInit, TemplateRef } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output, TemplateRef } from '@angular/core';
 import type { ThemePalette } from '@angular/material/core';
 import { IconComponent } from '../../../icon';
 
@@ -44,12 +44,17 @@ export class ButtonComponent implements OnInit {
 
   @Input() iconTemplate: TemplateRef<IconComponent>;
 
+  @Output() onclick: EventEmitter<any> = new EventEmitter()
+
   constructor() { }
 
   /**
    * @ignore
    */
   ngOnInit(): void {
+  }
+  onClick(evt: any) {
+    this.onclick.emit(evt)
   }
 
 }
