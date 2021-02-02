@@ -25,6 +25,8 @@ export class InputComponent implements OnInit {
 
   @Input() formControl: FormControl;
 
+  @Input() placeholder = "";
+
 
   constructor() { }
 

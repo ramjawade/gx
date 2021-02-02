@@ -6,8 +6,12 @@
 // For mobile
 // mobile view css should be in application
 .mat-drawer {
-  width: 20%;
   @include respond(phone) {
     width: 100%;
   }
+}
+
+.mat-toolbar {
+  background: #ffffff;
+  border-radius: 8px;
 }

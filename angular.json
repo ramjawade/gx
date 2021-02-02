@@ -515,6 +515,44 @@
           "style": "scss"
         }
       }
+    },
+    "map": {
+      "projectType": "library",
+      "root": "libs/map",
+      "sourceRoot": "libs/map/src",
+      "prefix": "gx",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/map/tsconfig.lib.json",
+            "project": "libs/map/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/map/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/map/src/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/map/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {

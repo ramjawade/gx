@@ -1,8 +1,18 @@
 // theme 1
 .mat-drawer {
-  background-color: lightblue;
+  background-color: #fbfcff;
 }
 
 .mat-drawer-content {
-  background-color: #dfdfdf;
+  background-color: #f1f5fd;
+}
+
+.mat-list-single-selected-option,
+.mat-list-single-selected-option:hover,
+.mat-list-single-selected-option:focus {
+  background: #f1f5fd;
+}
+
+.mat-drawer-side {
+  border-right: none;
 }

@@ -64,6 +64,9 @@
     },
     "template-template1": {
       "tags": []
+    },
+    "map": {
+      "tags": []
     }
   }
 }

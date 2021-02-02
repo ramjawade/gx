@@ -1,18 +1,32 @@
 .page {
   &-header {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    // position: absolute;
+    // left: 50%;
+    // transform: translateX(-50%);
   }
   &-logo {
-    position: relative;
-    height: 64px;
+    height: 140px;
+  }
+  &-content {
+    padding: 30px;
   }
 }
 
 .center {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  // position: absolute;
+  // left: 50%;
+  // top: 50%;
+  // transform: translate(-50%, -50%);
+}
+.toolbar {
+  background: #ffffff;
+  border-radius: 8px;
+}
+.input {
+  &::ng-deep {
+    .mat-form-field-wrapper {
+      padding-bottom: 0;
+    }
+  }
+  font-size: 12px;
 }

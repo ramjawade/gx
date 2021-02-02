@@ -8,5 +8,6 @@ module.exports = {
     '<rootDir>/libs/modules/product-mgt',
     '<rootDir>/apps/product',
     '<rootDir>/libs/template/template1',
+    '<rootDir>/libs/map',
   ],
 };

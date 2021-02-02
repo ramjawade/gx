@@ -1,6 +1,8 @@
 :host {
   height: 100%;
-  mat-drawer-container {
-    height: inherit;
-  }
+  width: 100%;
+}
+
+.drawer {
+  height: 100%;
 }

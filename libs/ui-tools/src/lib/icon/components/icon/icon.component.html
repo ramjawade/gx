@@ -1,7 +1,17 @@
 <mat-icon
+  *ngIf="!svgPath"
   aria-hidden="false"
   aria-label="icon"
   [color]="theme"
   [fontIcon]="fontIcon"
+  [fontSet]="fontSet"
+></mat-icon>
+
+<mat-icon
+  aria-hidden="false"
+  aria-label="icon"
+  *ngIf="svgPath"
+  [color]="theme"
+  [svgIcon]="fontIcon"
   [fontSet]="fontSet"
 ></mat-icon>

@@ -1,20 +1,10 @@
-<mat-form-field class="example-form-field" [appearance]="appearance">
-  <mat-label> input</mat-label>
-  <input matInput [formControl]="formControl" type="text" />
+<mat-form-field [appearance]="appearance">
+  <!-- <mat-label> input</mat-label> -->
+  <input matInput [placeholder]="placeholder" type="text" />
   <ng-container matSuffix>
     <ng-content select="[suffix]"></ng-content>
   </ng-container>
   <ng-container matPrefix>
     <ng-content select="[prefix]"></ng-content>
   </ng-container>
-  <!-- <button
-    mat-button
-    *ngIf="value"
-    matSuffix
-    mat-icon-button
-    aria-label="Clear"
-    (click)="value = ''"
-  >
-    <mat-icon>close</mat-icon>
-  </button> -->
 </mat-form-field>

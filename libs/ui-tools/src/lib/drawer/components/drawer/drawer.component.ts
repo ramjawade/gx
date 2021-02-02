@@ -14,6 +14,8 @@ export class DrawerComponent implements OnInit {
 
   @Input() hasBackdrop = false;
 
+  @Input() flex = '21';
+
   @Input() mode: MatDrawerMode = 'side';
 
   constructor(private cdr: ChangeDetectorRef) { }
