@@ -22,7 +22,7 @@ import { Template1Module } from "@gx/template1";
       path: "user-mgt",
       loadChildren: () => import("@gx/user-mgt").then(m => m.UserMgtModule)
     }
-    ], { initialNavigation: 'enabled' }),
+    ], { initialNavigation: 'enabled', relativeLinkResolution: 'legacy' }),
   ],
   providers: [],
   bootstrap: [AppComponent],

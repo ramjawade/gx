@@ -7,16 +7,16 @@ import { RouterModule } from "@angular/router";
   imports: [
     CommonModule,
     RouterModule.forRoot([
-      {
+    {
         path: "",
         redirectTo: "user-mgt",
         pathMatch: "full"
-      },
-      {
+    },
+    {
         path: 'user-mgt',
         loadChildren: () => import("@gx/user-mgt").then((m) => m.UserMgtModule)
-      }
-    ])
+    }
+], { relativeLinkResolution: 'legacy' })
   ]
 })
 export class AppRoutingModule { }

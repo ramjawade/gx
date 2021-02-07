@@ -9,5 +9,6 @@ module.exports = {
     '<rootDir>/apps/product',
     '<rootDir>/libs/template/template1',
     '<rootDir>/libs/map',
+    '<rootDir>/apps/layer',
   ],
 };
