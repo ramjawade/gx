@@ -659,10 +659,13 @@
             "aot": true,
             "assets": [
               "apps/vachanalay/src/favicon.ico",
-              "apps/vachanalay/src/assets"
+              "apps/vachanalay/src/assets",
+              "apps/vachanalay/src/manifest.webmanifest"
             ],
             "styles": ["apps/vachanalay/src/styles.scss"],
-            "scripts": []
+            "scripts": [],
+            "serviceWorker": true,
+            "ngswConfigPath": "apps/vachanalay/ngsw-config.json"
           },
           "configurations": {
             "production": {
