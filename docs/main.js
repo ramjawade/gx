@@ -106,6 +106,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/toolbar */ "/t3+");
 /* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/flex-layout */ "YUcS");
 /* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/icon */ "NFeN");
+/* harmony import */ var _angular_service_worker__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/service-worker */ "Jho9");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../environments/environment */ "mh2f");
+
+
+
 
 
 
@@ -124,11 +129,17 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
             _angular_flex_layout__WEBPACK_IMPORTED_MODULE_5__["FlexLayoutModule"],
             _angular_material_icon__WEBPACK_IMPORTED_MODULE_6__["MatIconModule"],
             _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"].forRoot([], { initialNavigation: 'enabled' }),
+            _angular_service_worker__WEBPACK_IMPORTED_MODULE_7__["ServiceWorkerModule"].register('ngsw-worker.js', {
+                enabled: _environments_environment__WEBPACK_IMPORTED_MODULE_8__["environment"].production,
+                // Register the ServiceWorker as soon as the app is stable
+                // or after 30 seconds (whichever comes first).
+                registrationStrategy: 'registerWhenStable:30000'
+            }),
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
         _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_4__["MatToolbarModule"],
         _angular_flex_layout__WEBPACK_IMPORTED_MODULE_5__["FlexLayoutModule"],
-        _angular_material_icon__WEBPACK_IMPORTED_MODULE_6__["MatIconModule"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"]] }); })();
+        _angular_material_icon__WEBPACK_IMPORTED_MODULE_6__["MatIconModule"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"], _angular_service_worker__WEBPACK_IMPORTED_MODULE_7__["ServiceWorkerModule"]] }); })();
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AppModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
         args: [{
@@ -139,6 +150,12 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
                     _angular_flex_layout__WEBPACK_IMPORTED_MODULE_5__["FlexLayoutModule"],
                     _angular_material_icon__WEBPACK_IMPORTED_MODULE_6__["MatIconModule"],
                     _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"].forRoot([], { initialNavigation: 'enabled' }),
+                    _angular_service_worker__WEBPACK_IMPORTED_MODULE_7__["ServiceWorkerModule"].register('ngsw-worker.js', {
+                        enabled: _environments_environment__WEBPACK_IMPORTED_MODULE_8__["environment"].production,
+                        // Register the ServiceWorker as soon as the app is stable
+                        // or after 30 seconds (whichever comes first).
+                        registrationStrategy: 'registerWhenStable:30000'
+                    }),
                 ],
                 providers: [],
                 bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]],
