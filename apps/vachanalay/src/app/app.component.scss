@@ -1,0 +1,16 @@
+.page {
+  overflow: hidden;
+  height: 100%;
+  &--content {
+    overflow: scroll;
+    padding: 2rem;
+    text-align: center;
+  }
+  &--footer {
+    box-shadow: 5px 3px 3px 2px silver;
+    position: sticky;
+  }
+}
+
+
+

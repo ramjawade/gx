@@ -21,13 +21,8 @@
             "polyfills": "apps/demo/src/polyfills.ts",
             "tsConfig": "apps/demo/tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "apps/demo/src/favicon.ico",
-              "apps/demo/src/assets"
-            ],
-            "styles": [
-              "apps/demo/src/styles.scss"
-            ],
+            "assets": ["apps/demo/src/favicon.ico", "apps/demo/src/assets"],
+            "styles": ["apps/demo/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -59,9 +54,7 @@
               ]
             }
           },
-          "outputs": [
-            "{options.outputPath}"
-          ]
+          "outputs": ["{options.outputPath}"]
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -95,9 +88,7 @@
             "jestConfig": "apps/demo/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": [
-            "coverage/apps/demo"
-          ]
+          "outputs": ["coverage/apps/demo"]
         }
       }
     },
@@ -122,9 +113,7 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/demo-e2e/**/*.{js,ts}"
-            ]
+            "lintFilePatterns": ["apps/demo-e2e/**/*.{js,ts}"]
           }
         }
       }
@@ -162,9 +151,7 @@
             "jestConfig": "libs/core/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": [
-            "coverage/libs/core"
-          ]
+          "outputs": ["coverage/libs/core"]
         }
       },
       "schematics": {
@@ -206,9 +193,7 @@
             "jestConfig": "libs/ui-tools/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": [
-            "coverage/libs/ui-tools"
-          ]
+          "outputs": ["coverage/libs/ui-tools"]
         },
         "storybook": {
           "builder": "@nrwl/storybook:storybook",
@@ -239,9 +224,7 @@
               "quiet": true
             }
           },
-          "outputs": [
-            "{options.outputPath}"
-          ]
+          "outputs": ["{options.outputPath}"]
         }
       },
       "schematics": {
@@ -273,9 +256,7 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/ui-tools-e2e/**/*.{js,ts}"
-            ]
+            "lintFilePatterns": ["apps/ui-tools-e2e/**/*.{js,ts}"]
           }
         }
       }
@@ -313,9 +294,7 @@
             "jestConfig": "libs/theme/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": [
-            "coverage/libs/theme"
-          ]
+          "outputs": ["coverage/libs/theme"]
         }
       },
       "schematics": {
@@ -357,9 +336,7 @@
             "jestConfig": "libs/modules/user-mgt/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": [
-            "coverage/libs/modules/user-mgt"
-          ]
+          "outputs": ["coverage/libs/modules/user-mgt"]
         }
       },
       "schematics": {
@@ -401,9 +378,7 @@
             "jestConfig": "libs/modules/product-mgt/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": [
-            "coverage/libs/modules/product-mgt"
-          ]
+          "outputs": ["coverage/libs/modules/product-mgt"]
         }
       },
       "schematics": {
@@ -436,9 +411,7 @@
               "apps/product/src/favicon.ico",
               "apps/product/src/assets"
             ],
-            "styles": [
-              "apps/product/src/styles.scss"
-            ],
+            "styles": ["apps/product/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -470,9 +443,7 @@
               ]
             }
           },
-          "outputs": [
-            "{options.outputPath}"
-          ]
+          "outputs": ["{options.outputPath}"]
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -506,9 +477,7 @@
             "jestConfig": "apps/product/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": [
-            "coverage/apps/product"
-          ]
+          "outputs": ["coverage/apps/product"]
         }
       }
     },
@@ -533,9 +502,7 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/product-e2e/**/*.{js,ts}"
-            ]
+            "lintFilePatterns": ["apps/product-e2e/**/*.{js,ts}"]
           }
         }
       }
@@ -573,9 +540,7 @@
             "jestConfig": "libs/template/template1/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": [
-            "coverage/libs/template/template1"
-          ]
+          "outputs": ["coverage/libs/template/template1"]
         }
       },
       "schematics": {
@@ -617,9 +582,7 @@
             "jestConfig": "libs/map/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": [
-            "coverage/libs/map"
-          ]
+          "outputs": ["coverage/libs/map"]
         }
       },
       "schematics": {
@@ -636,16 +599,12 @@
       "architect": {
         "build": {
           "builder": "@nrwl/node:build",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/layer",
             "main": "apps/layer/src/main.ts",
             "tsConfig": "apps/layer/tsconfig.app.json",
-            "assets": [
-              "apps/layer/src/assets"
-            ]
+            "assets": ["apps/layer/src/assets"]
           },
           "configurations": {
             "production": {
@@ -670,9 +629,7 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/layer/**/*.ts"
-            ]
+            "lintFilePatterns": ["apps/layer/**/*.ts"]
           }
         },
         "test": {
@@ -681,9 +638,121 @@
             "jestConfig": "apps/layer/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": [
-            "coverage/apps/layer"
-          ]
+          "outputs": ["coverage/apps/layer"]
+        }
+      }
+    },
+    "vachanalay": {
+      "projectType": "application",
+      "root": "apps/vachanalay",
+      "sourceRoot": "apps/vachanalay/src",
+      "prefix": "gx",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/vachanalay",
+            "index": "apps/vachanalay/src/index.html",
+            "main": "apps/vachanalay/src/main.ts",
+            "polyfills": "apps/vachanalay/src/polyfills.ts",
+            "tsConfig": "apps/vachanalay/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/vachanalay/src/favicon.ico",
+              "apps/vachanalay/src/assets"
+            ],
+            "styles": ["apps/vachanalay/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/vachanalay/src/environments/environment.ts",
+                  "with": "apps/vachanalay/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "vachanalay:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "vachanalay:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "vachanalay:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/vachanalay/src/**/*.ts",
+              "apps/vachanalay/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/vachanalay"],
+          "options": {
+            "jestConfig": "apps/vachanalay/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "vachanalay-e2e": {
+      "root": "apps/vachanalay-e2e",
+      "sourceRoot": "apps/vachanalay-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/vachanalay-e2e/cypress.json",
+            "tsConfig": "apps/vachanalay-e2e/tsconfig.e2e.json",
+            "devServerTarget": "vachanalay:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "vachanalay:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/vachanalay-e2e/**/*.{js,ts}"]
+          }
         }
       }
     }
@@ -706,11 +775,18 @@
       }
     },
     "@nrwl/angular:application": {
+      "style": "scss",
+      "linter": "eslint",
       "unitTestRunner": "jest",
       "e2eTestRunner": "cypress"
     },
     "@nrwl/angular:library": {
+      "style": "scss",
+      "linter": "eslint",
       "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:component": {
+      "style": "scss"
     }
   },
   "defaultProject": "demo"

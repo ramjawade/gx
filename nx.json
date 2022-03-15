@@ -1,14 +1,9 @@
 {
   "npmScope": "gx",
-  "affected": {
-    "defaultBase": "master"
-  },
+  "affected": { "defaultBase": "master" },
   "implicitDependencies": {
     "angular.json": "*",
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
@@ -29,47 +24,20 @@
     }
   },
   "projects": {
-    "demo": {
-      "tags": []
-    },
-    "demo-e2e": {
-      "tags": [],
-      "implicitDependencies": ["demo"]
-    },
-    "core": {
-      "tags": ["core"]
-    },
-    "ui-tools": {
-      "tags": []
-    },
-    "ui-tools-e2e": {
-      "tags": [],
-      "implicitDependencies": ["ui-tools"]
-    },
-    "theme": {
-      "tags": []
-    },
-    "modules-user-mgt": {
-      "tags": ["module"]
-    },
-    "modules-product-mgt": {
-      "tags": ["module"]
-    },
-    "product": {
-      "tags": []
-    },
-    "product-e2e": {
-      "tags": [],
-      "implicitDependencies": ["product"]
-    },
-    "template-template1": {
-      "tags": []
-    },
-    "map": {
-      "tags": []
-    },
-    "layer": {
-      "tags": []
-    }
+    "demo": { "tags": [] },
+    "demo-e2e": { "tags": [], "implicitDependencies": ["demo"] },
+    "core": { "tags": ["core"] },
+    "ui-tools": { "tags": [] },
+    "ui-tools-e2e": { "tags": [], "implicitDependencies": ["ui-tools"] },
+    "theme": { "tags": [] },
+    "modules-user-mgt": { "tags": ["module"] },
+    "modules-product-mgt": { "tags": ["module"] },
+    "product": { "tags": [] },
+    "product-e2e": { "tags": [], "implicitDependencies": ["product"] },
+    "template-template1": { "tags": [] },
+    "map": { "tags": [] },
+    "layer": { "tags": [] },
+    "vachanalay": { "tags": [] },
+    "vachanalay-e2e": { "tags": [], "implicitDependencies": ["vachanalay"] }
   }
 }

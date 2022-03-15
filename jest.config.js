@@ -10,5 +10,6 @@ module.exports = {
     '<rootDir>/libs/template/template1',
     '<rootDir>/libs/map',
     '<rootDir>/apps/layer',
+    '<rootDir>/apps/vachanalay',
   ],
 };
