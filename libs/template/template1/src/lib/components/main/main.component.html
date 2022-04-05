@@ -1,7 +1,17 @@
+<video
+  style="display: none"
+  #video
+  width="640"
+  height="480"
+  autoplay
+  [srcObject]="stream"
+></video>
+<canvas #canvas width="640" height="480"></canvas>
 <section class="main-page" fxFill>
-  <gx-drawer #drawer fxFlex>
+  <gx-drawer #drawer mode="over" [opened]="opened$ | async"  fxFlex>
     <div class="page-sidenav" sidenav>
       <div class="">
+        <!-- <gx-icon [fontIcon]="'icon-cross'" (click)="close()"></gx-icon> -->
         <div fxLayout="column" fxLayoutAlign="center center" class="page-logo">
           <h2 class="center">
             <img src="assets/logo.png" alt="" srcset="" />
@@ -22,7 +32,7 @@
     <div class="page-content" content>
       <gx-toolbar>
         <div fxFlex fxLayout="row" fxLayoutAlign="space-between center">
-          <span>Welcome Yash ..!</span>
+          <gx-icon [fontIcon]="'icon-menu'" (click)="open()"></gx-icon>
           <gx-input [placeholder]="'search'" class="input">
             <gx-button suffix [type]="'icon'" [iconTemplate]="search">
               <ng-template #search>

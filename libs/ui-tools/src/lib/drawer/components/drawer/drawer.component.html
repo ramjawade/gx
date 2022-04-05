@@ -1,5 +1,5 @@
 <mat-drawer-container class="drawer" [hasBackdrop]="hasBackdrop">
-  <mat-drawer [style.width]="flex + '%'" #drawer opened="true" [mode]="mode">
+  <mat-drawer [style.width]="flex + '%'" #drawer [opened]="opened" [mode]="mode">
     <section class="sidenav">
       <ng-content select="[sidenav]"></ng-content>
     </section>
